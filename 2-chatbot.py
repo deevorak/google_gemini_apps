@@ -19,7 +19,7 @@ MODEL_GEMMA4="gemma-4-26b-a4b-it"
 chat = client.chats.create(
     model=MODEL_GEMMA4, 
     config=types.GenerateContentConfig(
-        temperature=0.7,
+        temperature=0,
         max_output_tokens=1024
     )
 )
