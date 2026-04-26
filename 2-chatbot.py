@@ -42,7 +42,7 @@ def enviar_mensagem(texto):
         print(f"\nErro na API: {e}")
 
 if __name__ == "__main__":
-    print("--- Chatbot Ativo (digite 'sair' para parar) ---")
+    print(f"{Fore.RED}--- Chatbot Ativo (digite 'sair' para parar) ---")
 
     while True:
         user_input = input(f"{Fore.YELLOW}Você: {Style.RESET_ALL}")
