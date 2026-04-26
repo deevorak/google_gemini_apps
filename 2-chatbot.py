@@ -49,6 +49,12 @@ if __name__ == "__main__":
         
         if user_input.lower() in ["sair", "exit", "quit"]:
             print("Encerrando...")
+
+            # Exibe hitórico ao sair
+            for message in chat.get_history():
+                print(f'role - {message.role}', end=": ")
+                print(message.parts[0].text)
+
             break
             
         if user_input.strip():
