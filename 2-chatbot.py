@@ -30,7 +30,7 @@ chat = client.chats.create(
 )
 
 def enviar_mensagem(texto):
-    """Envia mensagem e processa a resposta em tempo real (streaming)."""
+    # Envia mensagem e processa a resposta em tempo real (streaming).
     try:
         resposta = chat.send_message_stream(texto)
         print(f"{Fore.CYAN}Chatbot: ", end="", flush=True)
