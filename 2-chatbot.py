@@ -1,9 +1,14 @@
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+from colorama import Fore, Style, init
 import os
 
 load_dotenv()
+
+# Inicializando o colorama
+init(autoreset=True)
+
 
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
@@ -28,7 +33,7 @@ def enviar_mensagem(texto):
     """Envia mensagem e processa a resposta em tempo real (streaming)."""
     try:
         resposta = chat.send_message_stream(texto)
-        print("Chatbot: ", end="", flush=True)
+        print(f"{Fore.CYAN}Chatbot: ", end="", flush=True)
         for chunk in resposta:
             if chunk.text:
                 print(chunk.text, end="", flush=True)
@@ -40,7 +45,7 @@ if __name__ == "__main__":
     print("--- Chatbot Ativo (digite 'sair' para parar) ---")
 
     while True:
-        user_input = input("Você: ")
+        user_input = input(f"{Fore.YELLOW}Você: {Style.RESET_ALL}")
         
         if user_input.lower() in ["sair", "exit", "quit"]:
             print("Encerrando...")
