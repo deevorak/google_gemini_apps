@@ -1,0 +1,7 @@
+ipykernel
+python-dotenv
+yfinance
+pandas
+matplotlib
+google-genai
+jupyterlab
