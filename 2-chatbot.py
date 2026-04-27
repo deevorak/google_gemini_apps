@@ -12,12 +12,12 @@ init(autoreset=True)
 
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
-MODEL_ID_LEGACY_FASTEST="gemini-2.5-flash-lite"
-MODEL_ID_LEGACY_FAST="gemini-2.5-flash"
-MODEL_ID_LEGACY_DEEP="gemini-2.5-pro"
-MODEL_ID_FASTEST= "gemini-3.1-flash-lite-preview"
-MODEL_ID_FAST="gemini-3.1-flash-preview"
-MODEL_ID_DEEP="gemini-3.1-pro-preview"
+# MODEL_ID_LEGACY_FASTEST="gemini-2.5-flash-lite"
+# MODEL_ID_LEGACY_FAST="gemini-2.5-flash"
+# MODEL_ID_LEGACY_DEEP="gemini-2.5-pro"
+# MODEL_ID_FASTEST= "gemini-3.1-flash-lite-preview"
+# MODEL_ID_FAST="gemini-3.1-flash-preview"
+# MODEL_ID_DEEP="gemini-3.1-pro-preview"
 MODEL_GEMMA4="gemma-4-26b-a4b-it"
 
 # Inicializa a sessão de chat para manter o contexto automaticamente
